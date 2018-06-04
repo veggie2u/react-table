@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import RTable from './components/RTable';
-import RHeader from './components/RHeader';
-import RBody from './components/RBody';
+import RHeaderTest from './components/RHeaderTest';
 
 class App extends Component {
   constructor(props) {
@@ -29,10 +28,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <RTable>
-          <RHeader columns={this.state.columns} />
-          <RBody data={this.state.data} />
-        </RTable>
+        <RTable
+          columns={this.state.columns}
+          data={this.state.data}
+          headerRender={columns => (
+            <RHeaderTest columns={columns} />
+          )}
+        />
       </div>
     );
   }

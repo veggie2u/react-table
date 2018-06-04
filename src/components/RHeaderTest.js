@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class RHeader extends React.Component {
+class RHeaderTest extends React.Component {
   render() {
-    const headers = this.props.columns.map(column => <th key={column.id}>{column.name}</th>);
+    const headers = this.props.columns.map(column => <th key={column.id}>Header</th>);
     return (
       <React.Fragment>
         <thead>
@@ -16,11 +16,11 @@ class RHeader extends React.Component {
   }
 }
 
-RHeader.propTypes = {
+RHeaderTest.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
   })).isRequired,
 };
 
-export default RHeader;
+export default RHeaderTest;

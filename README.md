@@ -1,4 +1,4 @@
-##React Table
+## React Table
 
 Flexible React data tables
 
